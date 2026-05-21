@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c6c6c6msmq6i0"]
+
+[ext_resource type="Texture2D" uid="uid://bruh60d3suxs5" path="res://assets/sprites/world/dirt_full_new.png" id="1_8cnbv"]
+[ext_resource type="Script" uid="uid://d0q1s40ussbyc" path="res://examples/mobile_ joystick/player.gd" id="2_eyfof"]
+[ext_resource type="Texture2D" uid="uid://dd7ufol3ecmod" path="res://assets/sprites/characters/ranger_m.png" id="3_jyuce"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="4_jyuce"]
+
+[node name="World" type="Node2D" unique_id=911289295]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=703653162]
+texture_repeat = 2
+texture = ExtResource("1_8cnbv")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 540, 960)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=394426246]
+position = Vector2(20, 20)
+motion_mode = 1
+script = ExtResource("2_eyfof")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1552174389]
+texture = ExtResource("3_jyuce")
+centered = false
+hframes = 3
+vframes = 4
+frame = 6
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=529390621]
+
+[node name="Virtual Joystick" parent="CanvasLayer" unique_id=791884954 instance=ExtResource("4_jyuce")]
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 0.0
