@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://byp4kgeispnbb"]
+
+[ext_resource type="Texture2D" uid="uid://bruh60d3suxs5" path="res://assets/sprites/world/dirt_full_new.png" id="1_jfy7a"]
+
+[node name="Background" type="Sprite2D" unique_id=992191186]
+texture_repeat = 2
+texture = ExtResource("1_jfy7a")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 540, 960)
