@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://d1hglywtk7gup"]
+
+[ext_resource type="Script" uid="uid://bkdid8fbust2x" path="res://examples/shared/resources/enemy_data.gd" id="1_fmo78"]
+[ext_resource type="Texture2D" uid="uid://dri660qthdirn" path="res://assets/sprites/monsters/BarbarianFighter4.PNG" id="3_aegdq"]
+
+[resource]
+script = ExtResource("1_fmo78")
+health = 3.0
+speed = 20.0
+texture = ExtResource("3_aegdq")
+metadata/_custom_type_script = "uid://bkdid8fbust2x"

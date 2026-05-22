@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://biafitvyiefkm"]
-
-[ext_resource type="Script" uid="uid://cbr0fuumw65hl" path="res://examples/shared/basic_arrow_attack.gd" id="1_wgne5"]
-
-[node name="BasicArrowAttack" type="Area2D" unique_id=2130157733]
-script = ExtResource("1_wgne5")

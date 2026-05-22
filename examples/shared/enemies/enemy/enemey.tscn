@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bkj3ggl6rb4h4"]
+
+[ext_resource type="Script" uid="uid://bng2hrhungrh0" path="res://examples/shared/enemies/enemy/enemey.gd" id="1_edgvk"]
+[ext_resource type="Script" uid="uid://bcq7w0p1csgnc" path="res://examples/shared/enemies/enemy/hurtbox.gd" id="2_7h6p7"]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1959719737]
+script = ExtResource("1_edgvk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=27920567]
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=138209534]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2_7h6p7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1265959193]
+
+[connection signal="damaged" from="Hurtbox" to="." method="_on_hurtbox_damaged"]

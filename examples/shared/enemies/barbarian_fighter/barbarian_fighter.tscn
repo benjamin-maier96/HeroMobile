@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dcjv7hq1ric6r"]
+
+[ext_resource type="PackedScene" uid="uid://bkj3ggl6rb4h4" path="res://examples/shared/enemies/enemy/enemey.tscn" id="1_i1k2f"]
+[ext_resource type="Script" uid="uid://cmhw4yxxvnjev" path="res://barbarian_fighter.gd" id="2_nmbbs"]
+[ext_resource type="Resource" uid="uid://d1hglywtk7gup" path="res://examples/shared/enemies/barbarian_fighter/barbarian_fighter.tres" id="3_m3wnm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucej3"]
+size = Vector2(15, 23)
+
+[node name="BarbarianFighter" unique_id=1959719737 instance=ExtResource("1_i1k2f")]
+script = ExtResource("2_nmbbs")
+data = ExtResource("3_m3wnm")
+
+[node name="CollisionShape2D" parent="Hurtbox" parent_id_path=PackedInt32Array(138209534) index="0" unique_id=1265959193]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_ucej3")

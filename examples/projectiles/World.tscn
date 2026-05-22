@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://bdefv6s6fmije"]
 
 [ext_resource type="PackedScene" uid="uid://byp4kgeispnbb" path="res://examples/shared/Background.tscn" id="1_jjxn3"]
-[ext_resource type="Script" uid="uid://i3bneufny4ey" path="res://examples/projectiles/world.gd" id="1_pjle6"]
-[ext_resource type="PackedScene" uid="uid://biafitvyiefkm" path="res://examples/shared/basic_arrow_attack.tscn" id="3_d2a71"]
+[ext_resource type="PackedScene" uid="uid://biafitvyiefkm" path="res://examples/shared/skills/basic_arrow_attack/basic_arrow_attack.tscn" id="3_d2a71"]
+[ext_resource type="PackedScene" uid="uid://dcjv7hq1ric6r" path="res://examples/shared/enemies/barbarian_fighter/barbarian_fighter.tscn" id="4_yqjjg"]
 
 [node name="World" type="Node2D" unique_id=1963037097]
-script = ExtResource("1_pjle6")
 
 [node name="Background" parent="." unique_id=992191186 instance=ExtResource("1_jjxn3")]
 
 [node name="BasicArrowAttack" parent="." unique_id=2130157733 instance=ExtResource("3_d2a71")]
+
+[node name="BarbarianFighter" parent="." unique_id=1959719737 instance=ExtResource("4_yqjjg")]
+position = Vector2(416, 261)
