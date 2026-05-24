@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cgkfs6mbwgols"]
+
+[ext_resource type="PackedScene" uid="uid://byp4kgeispnbb" path="res://examples/shared/Background.tscn" id="1_1xfjl"]
+[ext_resource type="PackedScene" uid="uid://dcjv7hq1ric6r" path="res://examples/shared/enemies/barbarian_fighter/barbarian_fighter.tscn" id="1_v4anc"]
+[ext_resource type="PackedScene" uid="uid://dwqdkt1d8etlw" path="res://examples/shared/misc/player.tscn" id="3_v1co8"]
+[ext_resource type="PackedScene" uid="uid://ptoq01u261ah" path="res://examples/shared/misc/skill_manager.tscn" id="4_mmxnt"]
+[ext_resource type="PackedScene" uid="uid://n2i3pwf47ji1" path="res://examples/shared/skills/basic_arrow_attack/basic_arrow_attack.tscn" id="5_8r74q"]
+[ext_resource type="PackedScene" uid="uid://4qbbgbij72ro" path="res://examples/shared/misc/enemy_spawner.tscn" id="6_ohgjw"]
+[ext_resource type="PackedScene" uid="uid://dqkjxbnfuur10" path="res://examples/shared/misc/skill_bar.tscn" id="6_xymsj"]
+[ext_resource type="Script" uid="uid://bf6wwnbysevi3" path="res://examples/shared/resources/spawn_info.gd" id="7_tn805"]
+
+[sub_resource type="Resource" id="Resource_0pl7d"]
+script = ExtResource("7_tn805")
+time_end = 10
+enemy = ExtResource("1_v4anc")
+enemy_num = 2
+enemy_spawn_delay = 2
+metadata/_custom_type_script = "uid://bf6wwnbysevi3"
+
+[node name="World" type="Node2D" unique_id=972067994]
+
+[node name="Background" parent="." unique_id=992191186 instance=ExtResource("1_1xfjl")]
+
+[node name="Player" parent="." unique_id=601616814 instance=ExtResource("3_v1co8")]
+position = Vector2(114, 300)
+
+[node name="SkillManager" parent="." unique_id=75785112 instance=ExtResource("4_mmxnt")]
+position = Vector2(-2, 4)
+skill_scenes = Array[PackedScene]([ExtResource("5_8r74q")])
+
+[node name="SkillBar" parent="." unique_id=1009121237 node_paths=PackedStringArray("skill_manager") instance=ExtResource("6_xymsj")]
+skill_manager = NodePath("../SkillManager")
+
+[node name="EnemySpawner" parent="." unique_id=2144741559 instance=ExtResource("6_ohgjw")]
+spawn_infos = Array[ExtResource("7_tn805")]([SubResource("Resource_0pl7d")])

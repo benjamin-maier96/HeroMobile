@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
+config/name="Hero Mobile"
 config/features=PackedStringArray("4.6", "Mobile")
 run/max_fps=60
 config/icon="res://icon.svg"
@@ -24,6 +24,10 @@ window/size/window_height_override=1920
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
+
+[global_group]
+
+player=""
 
 [input]
 

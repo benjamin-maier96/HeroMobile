@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://biafitvyiefkm"]
+[gd_scene format=3 uid="uid://n2i3pwf47ji1"]
 
+[ext_resource type="PackedScene" uid="uid://bkcd4e4sn2iqc" path="res://examples/shared/skills/skill/skill.tscn" id="1_awc1w"]
 [ext_resource type="Script" uid="uid://cbr0fuumw65hl" path="res://examples/shared/skills/basic_arrow_attack/basic_arrow_attack.gd" id="1_wgne5"]
 [ext_resource type="Resource" uid="uid://x1ysi0d4nhfn" path="res://examples/shared/skills/basic_arrow_attack/basic_arrow_attack.tres" id="2_awc1w"]
 
-[node name="BasicArrowAttack" type="Area2D" unique_id=2130157733]
+[node name="BasicArrowAttack" unique_id=989912405 instance=ExtResource("1_awc1w")]
 script = ExtResource("1_wgne5")
 data = ExtResource("2_awc1w")

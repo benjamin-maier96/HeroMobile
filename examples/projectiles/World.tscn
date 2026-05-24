@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bdefv6s6fmije"]
 
 [ext_resource type="PackedScene" uid="uid://byp4kgeispnbb" path="res://examples/shared/Background.tscn" id="1_jjxn3"]
-[ext_resource type="PackedScene" uid="uid://biafitvyiefkm" path="res://examples/shared/skills/basic_arrow_attack/basic_arrow_attack.tscn" id="3_d2a71"]
+[ext_resource type="PackedScene" uid="uid://n2i3pwf47ji1" path="res://examples/shared/skills/basic_arrow_attack/basic_arrow_attack.tscn" id="3_d2a71"]
 [ext_resource type="PackedScene" uid="uid://dcjv7hq1ric6r" path="res://examples/shared/enemies/barbarian_fighter/barbarian_fighter.tscn" id="4_yqjjg"]
 
 [node name="World" type="Node2D" unique_id=1963037097]

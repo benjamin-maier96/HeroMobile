@@ -2,11 +2,44 @@
 
 [ext_resource type="Script" uid="uid://bng2hrhungrh0" path="res://examples/shared/enemies/enemy/enemey.gd" id="1_edgvk"]
 [ext_resource type="Script" uid="uid://bcq7w0p1csgnc" path="res://examples/shared/enemies/enemy/hurtbox.gd" id="2_7h6p7"]
+[ext_resource type="Shader" uid="uid://b2ag1g3bji0ss" path="res://examples/shared/shaders/enemy.gdshader" id="2_i4q2l"]
+[ext_resource type="Script" uid="uid://byscrvrm8v1a8" path="res://examples/shared/misc/damage_number_spawner.gd" id="4_qvhau"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qvhau"]
+resource_local_to_scene = true
+shader = ExtResource("2_i4q2l")
+shader_parameter/damaged = true
+
+[sub_resource type="Animation" id="Animation_i4q2l"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_qvhau"]
+resource_name = "hit_animation"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/damaged")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ar7is"]
+_data = {
+&"RESET": SubResource("Animation_i4q2l"),
+&"hit_animation": SubResource("Animation_qvhau")
+}
 
 [node name="Enemy" type="CharacterBody2D" unique_id=1959719737]
 script = ExtResource("1_edgvk")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=27920567]
+material = SubResource("ShaderMaterial_qvhau")
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=138209534]
 collision_layer = 2
@@ -14,5 +47,12 @@ collision_mask = 0
 script = ExtResource("2_7h6p7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1265959193]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1214408047]
+libraries/ = SubResource("AnimationLibrary_ar7is")
+
+[node name="DamageNumberSpawner" type="Node2D" parent="." unique_id=523587818]
+script = ExtResource("4_qvhau")
+metadata/_custom_type_script = "uid://byscrvrm8v1a8"
 
 [connection signal="damaged" from="Hurtbox" to="." method="_on_hurtbox_damaged"]

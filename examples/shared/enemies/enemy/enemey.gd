@@ -6,10 +6,12 @@ class_name EnemyBase
 
 var player = null
 var health: float
+@onready var anim = $AnimationPlayer
 
 func _ready():
     health = data.health
     $Sprite2D.texture = data.texture
+    player = get_tree().get_first_node_in_group("player")
 
 func _physics_process(delta):
     if player:
@@ -19,7 +21,9 @@ func _physics_process(delta):
 
 func take_damage(amount: float) -> void:
     health -= amount
-    print("enemy took damage: ", amount)
+    anim.play("hit_animation")
+    
+    $DamageNumberSpawner.spawn_label(amount)
 
     if health <= 0:
         die()

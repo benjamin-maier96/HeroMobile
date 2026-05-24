@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://cjhtg2t27we41"]
+
+[ext_resource type="FontFile" uid="uid://4wwohj8a1s5q" path="res://assets/fonts/MegamaxJonathan.ttf" id="1_tsjmc"]
+
+[resource]
+font = ExtResource("1_tsjmc")
+font_size = 12
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)

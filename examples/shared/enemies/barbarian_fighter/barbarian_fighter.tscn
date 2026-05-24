@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://dcjv7hq1ric6r"]
 
 [ext_resource type="PackedScene" uid="uid://bkj3ggl6rb4h4" path="res://examples/shared/enemies/enemy/enemey.tscn" id="1_i1k2f"]
-[ext_resource type="Script" uid="uid://cmhw4yxxvnjev" path="res://barbarian_fighter.gd" id="2_nmbbs"]
+[ext_resource type="Script" uid="uid://cmhw4yxxvnjev" path="res://examples/shared/enemies/barbarian_fighter/barbarian_fighter.gd" id="2_nmbbs"]
 [ext_resource type="Resource" uid="uid://d1hglywtk7gup" path="res://examples/shared/enemies/barbarian_fighter/barbarian_fighter.tres" id="3_m3wnm"]
+[ext_resource type="Texture2D" uid="uid://dri660qthdirn" path="res://assets/sprites/monsters/BarbarianFighter4.PNG" id="3_nmbbs"]
+[ext_resource type="Shader" uid="uid://b2ag1g3bji0ss" path="res://examples/shared/shaders/enemy.gdshader" id="4_1wwwx"]
+[ext_resource type="LabelSettings" uid="uid://cjhtg2t27we41" path="res://examples/shared/misc/DamageNumberBasic.tres" id="6_0dl0x"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0dl0x"]
+resource_local_to_scene = true
+shader = ExtResource("4_1wwwx")
+shader_parameter/damaged = false
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ucej3"]
 size = Vector2(15, 23)
@@ -11,6 +19,14 @@ size = Vector2(15, 23)
 script = ExtResource("2_nmbbs")
 data = ExtResource("3_m3wnm")
 
+[node name="Sprite2D" parent="." index="0" unique_id=27920567]
+material = SubResource("ShaderMaterial_0dl0x")
+texture = ExtResource("3_nmbbs")
+
 [node name="CollisionShape2D" parent="Hurtbox" parent_id_path=PackedInt32Array(138209534) index="0" unique_id=1265959193]
 position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_ucej3")
+
+[node name="DamageNumberSpawner" parent="." index="3" unique_id=523587818]
+position = Vector2(0, -14)
+label_settings = ExtResource("6_0dl0x")

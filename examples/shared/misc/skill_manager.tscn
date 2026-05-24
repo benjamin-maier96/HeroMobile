@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ptoq01u261ah"]
+
+[ext_resource type="Script" uid="uid://gd05wqwhy5pw" path="res://examples/shared/misc/skill_manager.gd" id="1_enluq"]
+
+[node name="SkillManager" type="Node2D" unique_id=75785112]
+script = ExtResource("1_enluq")
