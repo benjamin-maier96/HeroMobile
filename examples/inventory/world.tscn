@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cpmasyf32srej"]
+
+[ext_resource type="PackedScene" uid="uid://1e55dhh7rkng" path="res://examples/inventory/inventory_grid.tscn" id="1_6oi4o"]
+
+[node name="World" type="Node2D" unique_id=1433554917]
+
+[node name="InventoryGrid" parent="." unique_id=2014433809 instance=ExtResource("1_6oi4o")]

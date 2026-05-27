@@ -15,6 +15,10 @@ config/features=PackedStringArray("4.6", "Mobile")
 run/max_fps=60
 config/icon="res://icon.svg"
 
+[autoload]
+
+VFX="*uid://8l7cj4tr1rnd"
+
 [display]
 
 window/size/viewport_width=540
@@ -28,6 +32,7 @@ window/handheld/orientation=1
 [global_group]
 
 player=""
+enemies=""
 
 [input]
 

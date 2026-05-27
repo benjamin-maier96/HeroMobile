@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://48n2toti8jbc"]
+
+[ext_resource type="PackedScene" uid="uid://cd6gjcxsit35g" path="res://examples/shared/projectiles/projectile/projectile.tscn" id="1_awuua"]
+[ext_resource type="Texture2D" uid="uid://cgl8b33ebglp6" path="res://assets/sprites/projectiles/ArrowSilver.PNG" id="2_23o23"]
+[ext_resource type="Resource" uid="uid://cad57gskgoh57" path="res://examples/shared/projectiles/ice_arrow/ice_arrow.tres" id="2_h0086"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0086"]
+size = Vector2(29, 3)
+
+[sub_resource type="Gradient" id="Gradient_awuua"]
+offsets = PackedFloat32Array(0, 0.42231947, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.68235296, 0.9372549, 1, 1, 0.4, 0.8, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1ciug"]
+gradient = SubResource("Gradient_awuua")
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_j2vwq"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_23o23"]
+particle_flag_disable_z = true
+direction = Vector3(-1, 0, 0)
+spread = 60.0
+initial_velocity_min = 10.0
+initial_velocity_max = 30.0
+directional_velocity_min = 0.9999839
+directional_velocity_max = 0.9999839
+directional_velocity_curve = SubResource("CurveXYZTexture_j2vwq")
+gravity = Vector3(0, 0, 0)
+scale_max = 3.0
+color_ramp = SubResource("GradientTexture1D_1ciug")
+
+[node name="IceArrow" unique_id=189380718 instance=ExtResource("1_awuua")]
+data = ExtResource("2_h0086")
+
+[node name="Sprite2D" parent="." index="0" unique_id=775069134]
+modulate = Color(0.68235296, 0.9372549, 1, 1)
+rotation = 2.3561945
+texture = ExtResource("2_23o23")
+
+[node name="HitBox" parent="." index="1" unique_id=1909354537]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_h0086")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." index="2" unique_id=195720395]
+position = Vector2(-15, 0)
+amount = 20
+lifetime = 0.3
+process_material = SubResource("ParticleProcessMaterial_23o23")

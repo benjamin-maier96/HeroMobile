@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://clrk6isiek5k4"]
+
+[ext_resource type="Script" uid="uid://s1pup1uwcgia" path="res://examples/lightning/world.gd" id="1_t5edm"]
+[ext_resource type="PackedScene" uid="uid://bmg31yeulglwb" path="res://examples/shared/skills/electric_arrow_attack/electric_arrow_attack.tscn" id="3_bc2ct"]
+[ext_resource type="PackedScene" uid="uid://dcjv7hq1ric6r" path="res://examples/shared/enemies/barbarian_fighter/barbarian_fighter.tscn" id="3_dysll"]
+
+[node name="World" type="Node2D" unique_id=1209240387]
+script = ExtResource("1_t5edm")
+
+[node name="Timer" type="Timer" parent="." unique_id=1266325383]
+autostart = true
+
+[node name="Fighter1" parent="." unique_id=1959719737 instance=ExtResource("3_dysll")]
+position = Vector2(110, 165)
+
+[node name="Fighter2" parent="." unique_id=473405874 instance=ExtResource("3_dysll")]
+position = Vector2(252, 167)
+
+[node name="ElectricArrowAttack" parent="." unique_id=989912405 instance=ExtResource("3_bc2ct")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

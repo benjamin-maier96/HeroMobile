@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ProjectileData" format=3 uid="uid://p2xm10s7emgv"]
+
+[ext_resource type="Script" uid="uid://d2xd3lvcdkuxo" path="res://examples/shared/resources/projectile_data.gd" id="1_wiu6j"]
+[ext_resource type="Texture2D" uid="uid://cgl8b33ebglp6" path="res://assets/sprites/projectiles/ArrowSilver.PNG" id="2_vru8s"]
+
+[resource]
+script = ExtResource("1_wiu6j")
+damage = 10.0
+speed = 400.0
+texture = ExtResource("2_vru8s")
+metadata/_custom_type_script = "uid://d2xd3lvcdkuxo"

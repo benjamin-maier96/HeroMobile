@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ChainLightningEffect" format=3 uid="uid://c0712oi452nyv"]
+
+[ext_resource type="Script" uid="uid://c2hig6v04hsxm" path="res://examples/shared/resources/hit_effects/chain_lightning_effect.gd" id="1_f0n7e"]
+[ext_resource type="PackedScene" uid="uid://b5ayya0oatunf" path="res://examples/shared/vfx/lightning_bolt.tscn" id="1_vvc7m"]
+
+[resource]
+script = ExtResource("1_f0n7e")
+lightning_scene = ExtResource("1_vvc7m")
+metadata/_custom_type_script = "uid://c2hig6v04hsxm"

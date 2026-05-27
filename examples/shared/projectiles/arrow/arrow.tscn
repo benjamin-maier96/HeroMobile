@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dwuvj83mhp2lm"]
 
 [ext_resource type="PackedScene" uid="uid://cd6gjcxsit35g" path="res://examples/shared/projectiles/projectile/projectile.tscn" id="1_rgtwx"]
-[ext_resource type="Texture2D" uid="uid://clu85o6sxj6tt" path="res://assets/sprites/projectile/ArrowWood.PNG" id="2_shr5t"]
+[ext_resource type="Texture2D" uid="uid://clu85o6sxj6tt" path="res://assets/sprites/projectiles/ArrowWood.PNG" id="2_shr5t"]
 [ext_resource type="Script" uid="uid://ct0mbbos438ib" path="res://examples/shared/projectiles/arrow/arrow.gd" id="2_vyyqr"]
 [ext_resource type="Resource" uid="uid://rnu3jmslo85r" path="res://examples/shared/projectiles/arrow/arrow.tres" id="3_7u11y"]
 

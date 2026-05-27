@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bmg31yeulglwb"]
+
+[ext_resource type="PackedScene" uid="uid://bkcd4e4sn2iqc" path="res://examples/shared/skills/skill/skill.tscn" id="1_mtdtu"]
+[ext_resource type="Script" uid="uid://c35uv8tlkk2qs" path="res://examples/shared/skills/electric_arrow_attack/electric_arrow_attack.gd" id="2_wkxku"]
+[ext_resource type="Resource" uid="uid://yw44v6bptbj3" path="res://examples/shared/skills/electric_arrow_attack/electric_arrow_attack.tres" id="3_rt1m7"]
+
+[node name="ElectricArrowAttack" unique_id=989912405 instance=ExtResource("1_mtdtu")]
+script = ExtResource("2_wkxku")
+data = ExtResource("3_rt1m7")

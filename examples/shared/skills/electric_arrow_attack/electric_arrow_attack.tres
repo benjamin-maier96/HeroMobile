@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://yw44v6bptbj3"]
+
+[ext_resource type="Script" uid="uid://beceksepdq2sh" path="res://examples/shared/resources/skill_data.gd" id="1_0xc5h"]
+[ext_resource type="Texture2D" uid="uid://8ju7q6pwcf0h" path="res://assets/sprites/skills/arrow.png" id="2_eu6rf"]
+
+[resource]
+script = ExtResource("1_0xc5h")
+cooldown = 1.0
+texture = ExtResource("2_eu6rf")
+metadata/_custom_type_script = "uid://beceksepdq2sh"

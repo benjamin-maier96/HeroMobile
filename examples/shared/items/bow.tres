@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://boetqwq8ot0en"]
+
+[ext_resource type="Script" uid="uid://cruwyb0s87o71" path="res://examples/shared/resources/item_data.gd" id="1_vfnnk"]
+[ext_resource type="Texture2D" uid="uid://dao2n1g8tbl20" path="res://assets/sprites/items/bows/Bow.PNG" id="2_xagdx"]
+
+[resource]
+script = ExtResource("1_vfnnk")
+texture = ExtResource("2_xagdx")
+metadata/_custom_type_script = "uid://cruwyb0s87o71"

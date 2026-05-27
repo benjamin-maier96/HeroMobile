@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dri660qthdirn" path="res://assets/sprites/monsters/BarbarianFighter4.PNG" id="3_aegdq"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_fmo78")
 health = 10.0
 speed = 20.0

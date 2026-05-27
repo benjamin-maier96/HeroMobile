@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bfdgpdsmesbg2"]
+
+[ext_resource type="PackedScene" uid="uid://bkcd4e4sn2iqc" path="res://examples/shared/skills/skill/skill.tscn" id="1_ogfr0"]
+[ext_resource type="Script" uid="uid://br2t0ov05gnyd" path="res://examples/shared/skills/ice_salve/ice_salve.gd" id="2_csxfk"]
+[ext_resource type="Resource" uid="uid://dh8mb6oiy8nsm" path="res://examples/shared/skills/ice_salve/ice_salve.tres" id="3_eypp1"]
+
+[node name="IceSalve" unique_id=989912405 instance=ExtResource("1_ogfr0")]
+script = ExtResource("2_csxfk")
+data = ExtResource("3_eypp1")

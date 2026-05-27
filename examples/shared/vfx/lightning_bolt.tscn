@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b5ayya0oatunf"]
+
+[ext_resource type="Script" uid="uid://de0en0mq6kbuo" path="res://examples/shared/vfx/lightning_bolt.gd" id="1_aw06s"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dysll"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bc2ct"]
+blend_mode = 1
+
+[node name="LightningBolt" type="Node2D" unique_id=1982925478]
+script = ExtResource("1_aw06s")
+
+[node name="GlowLine" type="Line2D" parent="." unique_id=140632238]
+material = SubResource("CanvasItemMaterial_dysll")
+points = PackedVector2Array(0, 1)
+default_color = Color(0.4, 0.8, 1, 0.34901962)
+antialiased = true
+
+[node name="CoreLine" type="Line2D" parent="." unique_id=567015125]
+material = SubResource("CanvasItemMaterial_bc2ct")
+width = 3.0
+antialiased = true

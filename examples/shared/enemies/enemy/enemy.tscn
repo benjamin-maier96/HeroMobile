@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bkj3ggl6rb4h4"]
 
-[ext_resource type="Script" uid="uid://bng2hrhungrh0" path="res://examples/shared/enemies/enemy/enemey.gd" id="1_edgvk"]
-[ext_resource type="Script" uid="uid://bcq7w0p1csgnc" path="res://examples/shared/enemies/enemy/hurtbox.gd" id="2_7h6p7"]
-[ext_resource type="Shader" uid="uid://b2ag1g3bji0ss" path="res://examples/shared/shaders/enemy.gdshader" id="2_i4q2l"]
-[ext_resource type="Script" uid="uid://byscrvrm8v1a8" path="res://examples/shared/misc/damage_number_spawner.gd" id="4_qvhau"]
+[ext_resource type="Script" uid="uid://bng2hrhungrh0" path="res://examples/shared/enemies/enemy/enemy.gd" id="1_dilhk"]
+[ext_resource type="Shader" uid="uid://b2ag1g3bji0ss" path="res://examples/shared/shaders/enemy.gdshader" id="2_j86bm"]
+[ext_resource type="Script" uid="uid://bcq7w0p1csgnc" path="res://examples/shared/enemies/enemy/hurtbox.gd" id="3_2gts4"]
+[ext_resource type="Script" uid="uid://byscrvrm8v1a8" path="res://examples/shared/misc/damage_number_spawner.gd" id="4_t3pa6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qvhau"]
 resource_local_to_scene = true
-shader = ExtResource("2_i4q2l")
+shader = ExtResource("2_j86bm")
 shader_parameter/damaged = true
 
 [sub_resource type="Animation" id="Animation_i4q2l"]
@@ -35,8 +35,8 @@ _data = {
 &"hit_animation": SubResource("Animation_qvhau")
 }
 
-[node name="Enemy" type="CharacterBody2D" unique_id=1959719737]
-script = ExtResource("1_edgvk")
+[node name="Enemy" type="CharacterBody2D" unique_id=1959719737 groups=["enemies"]]
+script = ExtResource("1_dilhk")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=27920567]
 material = SubResource("ShaderMaterial_qvhau")
@@ -44,7 +44,7 @@ material = SubResource("ShaderMaterial_qvhau")
 [node name="Hurtbox" type="Area2D" parent="." unique_id=138209534]
 collision_layer = 2
 collision_mask = 0
-script = ExtResource("2_7h6p7")
+script = ExtResource("3_2gts4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1265959193]
 
@@ -52,7 +52,7 @@ script = ExtResource("2_7h6p7")
 libraries/ = SubResource("AnimationLibrary_ar7is")
 
 [node name="DamageNumberSpawner" type="Node2D" parent="." unique_id=523587818]
-script = ExtResource("4_qvhau")
+script = ExtResource("4_t3pa6")
 metadata/_custom_type_script = "uid://byscrvrm8v1a8"
 
 [connection signal="damaged" from="Hurtbox" to="." method="_on_hurtbox_damaged"]

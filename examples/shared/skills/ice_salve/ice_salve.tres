@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://dh8mb6oiy8nsm"]
+
+[ext_resource type="Script" uid="uid://beceksepdq2sh" path="res://examples/shared/resources/skill_data.gd" id="1_ebl25"]
+
+[resource]
+script = ExtResource("1_ebl25")
+cooldown = 2.0
+metadata/_custom_type_script = "uid://beceksepdq2sh"

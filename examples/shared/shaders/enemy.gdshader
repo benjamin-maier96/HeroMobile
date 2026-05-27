@@ -3,7 +3,7 @@ shader_type canvas_item;
 uniform bool damaged = false;
 
 void vertex() {
-	VERTEX.y *= sin(TIME * 10.0) * 0.1 + 1.2;
+	//VERTEX.y *= sin(TIME * 10.0) * 0.1 + 1.2;
 }
 
 void fragment() {

@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://daoeynf5f0u2x"]
+
+[ext_resource type="PackedScene" uid="uid://crx3xj42p4bxg" path="res://examples/shared/vfx/vfx_effect.tscn" id="1_hgyjt"]
+[ext_resource type="Texture2D" uid="uid://pqdemxp37ivi" path="res://assets/sprites/animations/FreezeHit.png" id="2_qlp5r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ar8go"]
+atlas = ExtResource("2_qlp5r")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ryu4"]
+atlas = ExtResource("2_qlp5r")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pikvh"]
+atlas = ExtResource("2_qlp5r")
+region = Rect2(96, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkcc4"]
+atlas = ExtResource("2_qlp5r")
+region = Rect2(144, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phkfe"]
+atlas = ExtResource("2_qlp5r")
+region = Rect2(192, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1ofb"]
+atlas = ExtResource("2_qlp5r")
+region = Rect2(240, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhaw5"]
+atlas = ExtResource("2_qlp5r")
+region = Rect2(288, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubdxc"]
+atlas = ExtResource("2_qlp5r")
+region = Rect2(336, 0, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bq44n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ar8go")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ryu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pikvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkcc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phkfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1ofb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhaw5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubdxc")
+}],
+"loop": false,
+"name": &"freeze_hit",
+"speed": 7.0
+}]
+
+[node name="FreezeHit" unique_id=626932974 instance=ExtResource("1_hgyjt")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=2093948365]
+sprite_frames = SubResource("SpriteFrames_bq44n")
+animation = &"freeze_hit"

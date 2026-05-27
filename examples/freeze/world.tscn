@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dpjtceq8gnj25"]
+
+[ext_resource type="Script" uid="uid://c8crwbtvgxaqk" path="res://examples/freeze/world.gd" id="1_2v5ib"]
+[ext_resource type="PackedScene" uid="uid://dcjv7hq1ric6r" path="res://examples/shared/enemies/barbarian_fighter/barbarian_fighter.tscn" id="1_xbqbl"]
+[ext_resource type="PackedScene" uid="uid://bfdgpdsmesbg2" path="res://examples/shared/skills/ice_salve/ice_salve.tscn" id="3_2v5ib"]
+[ext_resource type="Script" uid="uid://bkdid8fbust2x" path="res://examples/shared/resources/enemy_data.gd" id="3_hkc2f"]
+[ext_resource type="Texture2D" uid="uid://dri660qthdirn" path="res://assets/sprites/monsters/BarbarianFighter4.PNG" id="4_8infx"]
+[ext_resource type="PackedScene" uid="uid://dwqdkt1d8etlw" path="res://examples/shared/misc/player.tscn" id="4_psw6n"]
+
+[sub_resource type="Resource" id="Resource_tdta5"]
+script = ExtResource("3_hkc2f")
+health = 100.0
+speed = 20.0
+texture = ExtResource("4_8infx")
+metadata/_custom_type_script = "uid://bkdid8fbust2x"
+
+[node name="World" type="Node2D" unique_id=688397453]
+script = ExtResource("1_2v5ib")
+
+[node name="BarbarianFighter" parent="." unique_id=1959719737 instance=ExtResource("1_xbqbl")]
+position = Vector2(78, 36)
+data = SubResource("Resource_tdta5")
+
+[node name="IceSalve" parent="." unique_id=989912405 instance=ExtResource("3_2v5ib")]
+
+[node name="Player" parent="." unique_id=601616814 instance=ExtResource("4_psw6n")]

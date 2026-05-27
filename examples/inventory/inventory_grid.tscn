@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://1e55dhh7rkng"]
+
+[ext_resource type="Script" uid="uid://d025eqnsw5ix0" path="res://examples/inventory/inventory_grid.gd" id="1_247r0"]
+[ext_resource type="Script" uid="uid://cruwyb0s87o71" path="res://examples/shared/resources/item_data.gd" id="2_qfiud"]
+[ext_resource type="Resource" uid="uid://boetqwq8ot0en" path="res://examples/shared/items/bow.tres" id="3_u8pu4"]
+[ext_resource type="FontFile" uid="uid://dagomrlqn8ubh" path="res://assets/fonts/PixelOperator8.ttf" id="4_exms7"]
+[ext_resource type="Texture2D" uid="uid://b05bpoyq14eqp" path="res://assets/sprites/icons/icon-ring-2d.png" id="5_exms7"]
+[ext_resource type="PackedScene" uid="uid://bxk6nqch4t18d" path="res://examples/inventory/item_slot.tscn" id="5_u8pu4"]
+[ext_resource type="Texture2D" uid="uid://c7tpdlfq8lui7" path="res://assets/sprites/icons/icon-helmet-2d.png" id="6_exms7"]
+[ext_resource type="Texture2D" uid="uid://bmhhfl8j3lqee" path="res://assets/sprites/icons/icon-shield-2d.png" id="7_1b5jy"]
+[ext_resource type="Texture2D" uid="uid://cvds0iiuqwlig" path="res://assets/sprites/icons/icon-sword-2d.png" id="7_aquig"]
+[ext_resource type="Texture2D" uid="uid://dth2kwqphh3h8" path="res://assets/sprites/icons/icon-boot-2d.png" id="9_2pdkt"]
+[ext_resource type="Texture2D" uid="uid://r804csrrfudm" path="res://assets/sprites/icons/icon-medal-2d.png" id="10_dsjla"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bknj4"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Resource" id="Resource_1b5jy"]
+script = ExtResource("2_qfiud")
+texture = ExtResource("5_exms7")
+metadata/_custom_type_script = "uid://cruwyb0s87o71"
+
+[sub_resource type="Resource" id="Resource_u8pu4"]
+script = ExtResource("2_qfiud")
+texture = ExtResource("6_exms7")
+metadata/_custom_type_script = "uid://cruwyb0s87o71"
+
+[sub_resource type="Resource" id="Resource_exms7"]
+script = ExtResource("2_qfiud")
+texture = ExtResource("5_exms7")
+metadata/_custom_type_script = "uid://cruwyb0s87o71"
+
+[sub_resource type="Resource" id="Resource_2pdkt"]
+script = ExtResource("2_qfiud")
+texture = ExtResource("7_aquig")
+metadata/_custom_type_script = "uid://cruwyb0s87o71"
+
+[sub_resource type="Resource" id="Resource_aquig"]
+script = ExtResource("2_qfiud")
+texture = ExtResource("7_1b5jy")
+metadata/_custom_type_script = "uid://cruwyb0s87o71"
+
+[sub_resource type="Resource" id="Resource_r1am2"]
+script = ExtResource("2_qfiud")
+texture = ExtResource("10_dsjla")
+metadata/_custom_type_script = "uid://cruwyb0s87o71"
+
+[sub_resource type="Resource" id="Resource_dsjla"]
+script = ExtResource("2_qfiud")
+texture = ExtResource("9_2pdkt")
+metadata/_custom_type_script = "uid://cruwyb0s87o71"
+
+[sub_resource type="Resource" id="Resource_s8de0"]
+script = ExtResource("2_qfiud")
+texture = ExtResource("10_dsjla")
+metadata/_custom_type_script = "uid://cruwyb0s87o71"
+
+[sub_resource type="LabelSettings" id="LabelSettings_djbna"]
+font = ExtResource("4_exms7")
+
+[node name="InventoryGrid" type="PanelContainer" unique_id=2014433809]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bknj4")
+script = ExtResource("1_247r0")
+items = Array[ExtResource("2_qfiud")]([ExtResource("3_u8pu4"), ExtResource("3_u8pu4")])
+max_items = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1614186201]
+layout_mode = 2
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer" unique_id=1900710248]
+layout_mode = 2
+
+[node name="Equipment" type="GridContainer" parent="VBoxContainer/CenterContainer" unique_id=2124599560]
+layout_mode = 2
+size_flags_horizontal = 0
+columns = 3
+
+[node name="ItemSlot" parent="VBoxContainer/CenterContainer/Equipment" unique_id=816049352 instance=ExtResource("5_u8pu4")]
+layout_mode = 2
+item_data = SubResource("Resource_1b5jy")
+
+[node name="ItemSlot9" parent="VBoxContainer/CenterContainer/Equipment" unique_id=458542474 instance=ExtResource("5_u8pu4")]
+layout_mode = 2
+item_data = SubResource("Resource_u8pu4")
+
+[node name="ItemSlot2" parent="VBoxContainer/CenterContainer/Equipment" unique_id=172724734 instance=ExtResource("5_u8pu4")]
+layout_mode = 2
+item_data = SubResource("Resource_exms7")
+
+[node name="ItemSlot3" parent="VBoxContainer/CenterContainer/Equipment" unique_id=1124395644 instance=ExtResource("5_u8pu4")]
+layout_mode = 2
+item_data = SubResource("Resource_2pdkt")
+
+[node name="ItemSlot4" parent="VBoxContainer/CenterContainer/Equipment" unique_id=194537946 instance=ExtResource("5_u8pu4")]
+layout_mode = 2
+
+[node name="ItemSlot5" parent="VBoxContainer/CenterContainer/Equipment" unique_id=1660654354 instance=ExtResource("5_u8pu4")]
+layout_mode = 2
+item_data = SubResource("Resource_aquig")
+
+[node name="ItemSlot6" parent="VBoxContainer/CenterContainer/Equipment" unique_id=265879107 instance=ExtResource("5_u8pu4")]
+layout_mode = 2
+item_data = SubResource("Resource_r1am2")
+
+[node name="ItemSlot7" parent="VBoxContainer/CenterContainer/Equipment" unique_id=953785715 instance=ExtResource("5_u8pu4")]
+layout_mode = 2
+item_data = SubResource("Resource_dsjla")
+
+[node name="ItemSlot8" parent="VBoxContainer/CenterContainer/Equipment" unique_id=170259835 instance=ExtResource("5_u8pu4")]
+layout_mode = 2
+item_data = SubResource("Resource_s8de0")
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer" unique_id=1013160612]
+layout_mode = 2
+text = "Inventory"
+label_settings = SubResource("LabelSettings_djbna")
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=1483633880]
+layout_mode = 2
+size_flags_vertical = 0
+columns = 4
