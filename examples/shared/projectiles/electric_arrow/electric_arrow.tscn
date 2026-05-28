@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://xs8rvkg8e5jy"]
 
 [ext_resource type="PackedScene" uid="uid://cd6gjcxsit35g" path="res://examples/shared/projectiles/projectile/projectile.tscn" id="1_hngle"]
-[ext_resource type="Resource" uid="uid://c0712oi452nyv" path="res://examples/shared/projectiles/electric_arrow/electric_arrow_chain_lightning.tres" id="3_qqsq5"]
 [ext_resource type="Resource" uid="uid://p2xm10s7emgv" path="res://examples/shared/projectiles/electric_arrow/electric_arrow.tres" id="4_eh2so"]
 [ext_resource type="Texture2D" uid="uid://cgl8b33ebglp6" path="res://assets/sprites/projectiles/ArrowSilver.PNG" id="4_qqsq5"]
 
@@ -10,12 +9,13 @@ size = Vector2(29, 3)
 
 [node name="ElectricArrow" unique_id=189380718 instance=ExtResource("1_hngle")]
 data = ExtResource("4_eh2so")
-hit_effect = ExtResource("3_qqsq5")
 
 [node name="Sprite2D" parent="." index="0" unique_id=775069134]
+modulate = Color(0.8156863, 0.69411767, 1, 1)
 rotation = 2.3561945
 texture = ExtResource("4_qqsq5")
 
 [node name="HitBox" parent="." index="1" unique_id=1909354537]
+visible = false
 position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_eh2so")

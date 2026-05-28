@@ -20,6 +20,7 @@ func activate():
 
     for i in range(arrow_count):
         var arrow = ARROW_SCENE.instantiate()
+        arrow.caster = player
 
         # Center the spread
         var t = 0.0

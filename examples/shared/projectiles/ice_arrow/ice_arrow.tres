@@ -2,10 +2,35 @@
 
 [ext_resource type="Script" uid="uid://d2xd3lvcdkuxo" path="res://examples/shared/resources/projectile_data.gd" id="1_lfnri"]
 [ext_resource type="Texture2D" uid="uid://cgl8b33ebglp6" path="res://assets/sprites/projectiles/ArrowSilver.PNG" id="2_mif4d"]
+[ext_resource type="Script" uid="uid://dn6tqauun5cuu" path="res://examples/shared/resources/trigger_effects/triggered_effect.gd" id="3_7n32m"]
+[ext_resource type="Script" uid="uid://c55hqhu1sh1st" path="res://examples/shared/resources/trigger_effects/vfx_effect.gd" id="4_ffsvq"]
+[ext_resource type="Script" uid="uid://c6l6wkov063kq" path="res://examples/shared/resources/trigger_effects/damage_effect.gd" id="5_ffsvq"]
+
+[sub_resource type="Resource" id="Resource_lclgj"]
+script = ExtResource("4_ffsvq")
+vfx_name = "freeze_hit"
+metadata/_custom_type_script = "uid://c55hqhu1sh1st"
+
+[sub_resource type="Resource" id="Resource_w2iit"]
+script = ExtResource("3_7n32m")
+trigger = 1
+effect = SubResource("Resource_lclgj")
+metadata/_custom_type_script = "uid://dn6tqauun5cuu"
+
+[sub_resource type="Resource" id="Resource_vi0yi"]
+script = ExtResource("5_ffsvq")
+metadata/_custom_type_script = "uid://c6l6wkov063kq"
+
+[sub_resource type="Resource" id="Resource_1cn4s"]
+script = ExtResource("3_7n32m")
+trigger = 1
+effect = SubResource("Resource_vi0yi")
+metadata/_custom_type_script = "uid://dn6tqauun5cuu"
 
 [resource]
 script = ExtResource("1_lfnri")
 damage = 2.0
-speed = 250.0
+speed = 400.0
 texture = ExtResource("2_mif4d")
+triggered_effects = Array[ExtResource("3_7n32m")]([SubResource("Resource_w2iit"), SubResource("Resource_1cn4s")])
 metadata/_custom_type_script = "uid://d2xd3lvcdkuxo"

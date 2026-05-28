@@ -2,10 +2,34 @@
 
 [ext_resource type="Script" uid="uid://d2xd3lvcdkuxo" path="res://examples/shared/resources/projectile_data.gd" id="1_wiu6j"]
 [ext_resource type="Texture2D" uid="uid://cgl8b33ebglp6" path="res://assets/sprites/projectiles/ArrowSilver.PNG" id="2_vru8s"]
+[ext_resource type="Script" uid="uid://dn6tqauun5cuu" path="res://examples/shared/resources/trigger_effects/triggered_effect.gd" id="3_4in0l"]
+[ext_resource type="Script" uid="uid://c6l6wkov063kq" path="res://examples/shared/resources/trigger_effects/damage_effect.gd" id="4_2igrw"]
+[ext_resource type="Script" uid="uid://c2hig6v04hsxm" path="res://examples/shared/resources/trigger_effects/chain_lightning_effect.gd" id="5_janej"]
+
+[sub_resource type="Resource" id="Resource_8d8ld"]
+script = ExtResource("4_2igrw")
+metadata/_custom_type_script = "uid://c6l6wkov063kq"
+
+[sub_resource type="Resource" id="Resource_pue4x"]
+script = ExtResource("3_4in0l")
+trigger = 1
+effect = SubResource("Resource_8d8ld")
+metadata/_custom_type_script = "uid://dn6tqauun5cuu"
+
+[sub_resource type="Resource" id="Resource_vswge"]
+script = ExtResource("5_janej")
+metadata/_custom_type_script = "uid://c2hig6v04hsxm"
+
+[sub_resource type="Resource" id="Resource_p2t43"]
+script = ExtResource("3_4in0l")
+trigger = 1
+effect = SubResource("Resource_vswge")
+metadata/_custom_type_script = "uid://dn6tqauun5cuu"
 
 [resource]
 script = ExtResource("1_wiu6j")
 damage = 10.0
 speed = 400.0
 texture = ExtResource("2_vru8s")
+triggered_effects = Array[ExtResource("3_4in0l")]([SubResource("Resource_pue4x"), SubResource("Resource_p2t43")])
 metadata/_custom_type_script = "uid://d2xd3lvcdkuxo"

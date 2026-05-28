@@ -1,14 +1,12 @@
-extends Resource
 class_name ChainLightningEffect
+extends EffectResource
 
 @export var max_jumps := 4
 @export var chain_range := 200.0
 @export var damage := 1
 
-func apply(first_hurtbox):
-    first_hurtbox.take_damage(damage)
-    var enemy = first_hurtbox.get_parent()
-    _chain(enemy)
+func execute(ctx: TriggerContext):
+    _chain(ctx.target)
 
 func _chain(current_enemy):
     var hit_enemies = [current_enemy]

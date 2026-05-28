@@ -5,6 +5,7 @@ extends Skill
 func activate():
     var arrow = load("res://examples/shared/projectiles/arrow/arrow.tscn").instantiate()
     if player:
+        arrow.caster = player
         arrow.global_position = player.global_position
         arrow.direction = (
             get_viewport().get_mouse_position() - player.global_position

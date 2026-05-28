@@ -2,10 +2,24 @@
 
 [ext_resource type="Script" uid="uid://d2xd3lvcdkuxo" path="res://examples/shared/resources/projectile_data.gd" id="1_khsad"]
 [ext_resource type="Texture2D" uid="uid://clu85o6sxj6tt" path="res://assets/sprites/projectiles/ArrowWood.PNG" id="2_dykva"]
+[ext_resource type="Script" uid="uid://dn6tqauun5cuu" path="res://examples/shared/resources/trigger_effects/triggered_effect.gd" id="3_wdsrl"]
+[ext_resource type="Script" uid="uid://c6l6wkov063kq" path="res://examples/shared/resources/trigger_effects/damage_effect.gd" id="4_m8psw"]
+
+[sub_resource type="Resource" id="Resource_byhf6"]
+script = ExtResource("4_m8psw")
+damage = 1
+metadata/_custom_type_script = "uid://c6l6wkov063kq"
+
+[sub_resource type="Resource" id="Resource_hf4vi"]
+script = ExtResource("3_wdsrl")
+trigger = 1
+effect = SubResource("Resource_byhf6")
+metadata/_custom_type_script = "uid://dn6tqauun5cuu"
 
 [resource]
 script = ExtResource("1_khsad")
 damage = 1.0
 speed = 300.0
 texture = ExtResource("2_dykva")
+triggered_effects = Array[ExtResource("3_wdsrl")]([SubResource("Resource_hf4vi")])
 metadata/_custom_type_script = "uid://d2xd3lvcdkuxo"
